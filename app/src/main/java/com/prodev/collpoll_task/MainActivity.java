@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
               //  Log.d(TAG, "PAGE_SIZE: "+PAGE_SIZE);
 
 
-                if(dy>0){
+                if(dy >0){
                     if (isScrolling && ((ScrolledItem+currentItem)==totalItem)  ) {
                         isScrolling = false;
                         if (modelRecyclerArrayList.size() == 87) {

@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             isScrolling = false;
                             progressBar.setVisibility(View.VISIBLE);
-                            //  String k= String.valueOf(currentPage);
+                            //   String k= String.valueOf(currentPage);
                             // fetchJSON(k);
                             currentPage += 2;
                             fetchJSON(currentPage);

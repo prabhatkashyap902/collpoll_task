@@ -108,52 +108,51 @@ pd.setMessage("Loading Data from Server! ");
                 ArrayList<String> al4 = new ArrayList<>();
 
                 JSONArray js = obj.getJSONArray("films");
-                if(js!=null  ){
+                if(js!=null  && js.length() > 0 ){
                     for(int i=0;i<js.length();i++){
                         al1.add(js.getString(i));
                     }
-                    for(int i=0;i<al1.size();i++){
-                        m=al1.get(i)+"\n";
-                    }
                 }
                 else{m="N/A";}
-
-
-
                 JSONArray js2 = obj.getJSONArray("species");
-                if(js2!=null){
+                if(js2!=null && js2.length()>0){
                     for(int i=0;i<js2.length();i++){
                         al2.add(js2.getString(i));
-                        }
-                    for(int i=0;i<al2.size();i++){
-                        n=al2.get(i)+"\n";
                     }
                 }
                 else{n="N/A";}
 
-
-
                 JSONArray js3 = obj.getJSONArray("vehicles");
-                if(js3!=null){
+                if(js3!=null&&js3.length()>0){
                     for(int i=0;i<js3.length();i++){
                         al3.add(js3.getString(i));
-                    }
-                    for(int i=0;i<al3.size();i++){
-                        o=al3.get(i)+"\n";
                     }
                 }
                 else{o="N/A";}
 
                 JSONArray js4 = obj.getJSONArray("starships");
-                if(js4!=null){
+                if(js4!=null&&js4.length()>0){
                     for(int i=0;i<js4.length();i++){
                         al4.add(js4.getString(i));
                     }
-                    for(int i=0;i<al4.size();i++){
-                        p=al4.get(i)+"\n";
-                    }
                 }
                 else{p="N/A";}
+
+                for(int i=0;i<al1.size();i++){
+                    m=m+al1.get(i)+"\n";
+                }
+                for(int i=0;i<al2.size();i++){
+                    n=n+al2.get(i)+"\n";
+                }
+                for(int i=0;i<al3.size();i++){
+                    o=o+al3.get(i)+"\n";
+                }
+                for(int i=0;i<al4.size();i++){
+                    p=p+al4.get(i)+"\n";
+                }
+
+
+
 
 
 
